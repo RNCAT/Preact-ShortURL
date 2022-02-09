@@ -1,0 +1,17 @@
+button {
+  margin: 20px 0px;
+}
+
+#main {
+  margin-top: 30%;
+}
+
+.card-footer {
+  text-align: center;
+}
+
+a {
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+}
