@@ -1,6 +1,6 @@
 import { Component } from 'preact'
 import axios from 'redaxios'
-import './form.css'
+import './assets/form.css'
 
 export class Form extends Component {
   state = { long_url: '', short_url: '' }
