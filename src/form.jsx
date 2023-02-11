@@ -68,7 +68,11 @@ export class Form extends Component {
               onInput={this.onInput}
               id="long_url"
             />
-            <div id="cf-container"></div>
+            <div
+              class="cf-turnstile"
+              data-sitekey="0x4AAAAAAACeIIfrziCGMDgV"
+              data-theme="light"
+            ></div>
             <button id="btn_short" className="btn-block btn-secondary" onClick={this.onClick}>
               SHORT!
             </button>
