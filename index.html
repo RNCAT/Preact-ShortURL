@@ -15,22 +15,21 @@
       async
       defer
     ></script>
-    <title>RennyCat URL Shortener</title>
-  </head>
-
-  <body>
-    <div id="container"></div>
-    <div id="app"></div>
-    <script type="module" src="/src/main.jsx"></script>
     <script>
-      window.onloadTurnstileCallback = function () {
-        turnstile.render('#container', {
+      window.onloadTurnstileCallback = () => {
+        turnstile.render('#cf-container', {
           sitekey: '0x4AAAAAAACeIIfrziCGMDgV',
-          callback: function (token) {
+          callback: (token) => {
             console.log(`Challenge Success ${token}`)
           },
         })
       }
     </script>
+    <title>RennyCat URL Shortener</title>
+  </head>
+
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
