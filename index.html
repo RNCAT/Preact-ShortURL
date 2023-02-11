@@ -10,11 +10,23 @@
       as="style"
       onload="this.rel='stylesheet'"
     />
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
     <title>RennyCat URL Shortener</title>
   </head>
 
   <body>
+    <div id="container"></div>
     <div id="app"></div>
     <script type="module" src="/src/main.jsx"></script>
+    <script>
+      window.onloadTurnstileCallback = function () {
+        turnstile.render('#container', {
+          sitekey: '0x4AAAAAAACeIIfrziCGMDgV',
+          callback: function (token) {
+            console.log(`Challenge Success ${token}`)
+          },
+        })
+      }
+    </script>
   </body>
 </html>
